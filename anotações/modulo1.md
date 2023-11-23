@@ -79,9 +79,11 @@ console.log(x.toFixed(2));
 #### Estrutura IF/ELSE:
 ~~~javascript
         if(){
-            //Bloco true
+            //...
+        }else if(){
+            //...
         }else{
-            //Bloco false
+            //...
         }
 ~~~
 
