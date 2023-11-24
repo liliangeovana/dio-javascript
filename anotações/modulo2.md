@@ -42,14 +42,41 @@
 
 - Usando toda uma função como um valor:
     ~~~~javascript
-        (function quadrado(){
+        (function main(){
            numero = 10
            quadrado = numero**2
         })();
+
+        main();
     ~~~~ 
-    > Colocando a função em `()`, ela é toda resolvida e adquire o valor da sua solução
+    > Colocando a função em `()`, ela é toda resolvida e adquire o valor da sua solução.
     - Exemplo:
         ~~~
             10 * (10+2)
         ~~~
-        > Nesse exemplo, o `()` recebe o valor 12. O mesmo acontece com a função anteriormente.
+        > Nesse exemplo, o `()` recebe o valor 12 antes de resolver o resto da equação. O mesmo acontece com a função anteriormente.
+
+- Denomina-se **Função Imediatamente Invocada**, pois:
+
+    - Os `()` após o final, significa que a função é resolvida e, em seguida, já executa a si mesmo (invocada imediatamente). Logo, não precisa chamá-la posteriormente.
+
+        > Ou seja, a função é criada e já executada. 
+
+    ~~~~javascript
+        (function main(){
+           numero = 10
+           quadrado = numero**2
+        })();
+    ~~~~ 
+    - Também é possível tirar o nome da função, ficando uma função não nomeada.
+
+      ~~~~javascript
+        (function (){
+           numero = 10
+           quadrado = numero**2
+        })();
+    ~~~~ 
+
+- Assim, essa função só existe dentro dos `()` em que ela se encontra, não podendo mais ser chamada posteriormente.
+
+- Muito utilizado em Desenvolvimento Web.
