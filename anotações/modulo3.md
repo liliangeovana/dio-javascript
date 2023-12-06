@@ -19,6 +19,8 @@
 > No terminal: Fulano | 20 | { nome: 
 'Fulano", idade: 20 }
 
+- Este é um objeto literal, criado sem o uso de uma Classe. 
+
 - Por ser dinâmico, é possível incrementar e/ou remover valores do objeto.
 
 ~~~javascript
