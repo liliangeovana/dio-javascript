@@ -3,7 +3,7 @@
 ## 🚀 Aprenda a Programar do Zero com JavaScript
 - [x] Primeiros Passos
 - [x] Conhecendo Funções
-- [ ] Criando Objetos e Classes
+- [x] Criando Objetos e Classes
 - [ ] Arrays e Estruturas de Repetição
 - [ ] Importação e Exportação
 - [ ] Desafios
@@ -21,4 +21,4 @@
 - [ ] Promises e Assincronismo
 
 ## Desafio
-- [ ] Currículo Profissional
+- [ ] Currículo Profissional Dinâmico
