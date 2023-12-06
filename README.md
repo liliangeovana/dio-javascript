@@ -4,7 +4,7 @@
 - [x] Primeiros Passos
 - [x] Conhecendo Funções
 - [x] Criando Objetos e Classes
-- [ ] Arrays e Estruturas de Repetição
+- [x] Arrays e Estruturas de Repetição
 - [ ] Importação e Exportação
 - [ ] Desafios
 
