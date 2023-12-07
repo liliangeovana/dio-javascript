@@ -15,10 +15,12 @@
 - [ ] Dominando o Protocolo HTTP e Integração com a PokeAPI
 - [ ] Desafio
 
-    - [ ] Base do projeto a ser desenvolvido
+    - Base do projeto a ser desenvolvido
     <p align="center">
     <img  src="./img/projeto-inspiracao.png" height="380" width="400" alt="Inspiração Projeto">
     </p> 
+    
+    > Site fonte: dribbble.com
 
 ## 🚀 Bloco 3 - Conceitos Avançados
 - [ ] Variáveis, Escopo e Tipos de dados
