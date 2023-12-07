@@ -7,6 +7,9 @@
 
 # Introdução
 
+- Ao instalar o Node, ele vem com seu gerenciador de pacotes, o `npm` - Node Package Manager 
+    - É através dele que instalamos bibliotecas que serão usadas no Node.
+
 - Executando arquivo JS no terminal:
     > node nome_arquivo.js
 
