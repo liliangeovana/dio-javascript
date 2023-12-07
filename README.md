@@ -5,8 +5,8 @@
 - [x] Conhecendo Funções
 - [x] Criando Objetos e Classes
 - [x] Arrays e Estruturas de Repetição
-- [ ] Importação e Exportação
-- [ ] Desafios
+- [x] Importação e Exportação
+- [x] Desafios
 
 ## 🚀 JavaScript para Web
 - [ ] Introdução ao Desenvolvimento Web com JS
