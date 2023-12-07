@@ -9,10 +9,16 @@
 - [x] Desafios
 
 ## 🚀Bloco 2 -  JavaScript para Web
+
 - [ ] Introdução ao Desenvolvimento Web com JS
 - [ ] Projeto com HTML/CSS - Listagem de Pokémon
 - [ ] Dominando o Protocolo HTTP e Integração com a PokeAPI
 - [ ] Desafio
+
+    - [ ] Base do projeto a ser desenvolvido
+    <p align="center">
+    <img  src="./img/projeto-inspiracao.png" height="380" width="400" alt="Inspiração Projeto">
+    </p> 
 
 ## 🚀 Bloco 3 - Conceitos Avançados
 - [ ] Variáveis, Escopo e Tipos de dados
