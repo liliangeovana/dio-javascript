@@ -1,6 +1,6 @@
 # Curso JavaScript - Plataforma DIO 🌎
 
-## 🚀Bloco 1 - Aprenda a Programar do Zero com JavaScript
+## 🚀Bloco 1 - Aprenda a Programar do Zero
 - [x] Primeiros Passos
 - [x] Conhecendo Funções
 - [x] Criando Objetos e Classes
@@ -9,7 +9,6 @@
 - [x] Desafios
 
 ## 🚀Bloco 2 -  JavaScript para Web
-
 - [ ] Introdução ao Desenvolvimento Web com JS
 - [ ] Projeto com HTML/CSS - Listagem de Pokémon
 - [ ] Dominando o Protocolo HTTP e Integração com a PokeAPI
