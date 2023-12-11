@@ -1,0 +1,8 @@
+/* "*" indica a característica para todo os elementos */
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.content {
+    padding: 1rem;
+}
