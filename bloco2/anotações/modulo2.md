@@ -38,3 +38,11 @@
 ## Estilização inicial
 
 1. No css, o padding da class `content` é de 1rem , pois é uma medida mais maleável do que utilizar o pixel.
+
+## Estilizção da listagem
+
+1. No arquivo css:
+    - Tira-se as margens e os detalhes da lista (ol)
+    - Colocar os elementos um ao lado do outro:
+        - A lista terá um `display: grid`: o estilo da lista se torna uma tabela.
+        - `grid-template-columns: 1fr 1r`: cada parte da tabela ocupa 1 fração da coluna
