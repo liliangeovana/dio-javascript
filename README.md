@@ -10,7 +10,7 @@
 
 ## 🚀Bloco 2 -  JavaScript para Web
 - [x] Introdução ao Desenvolvimento Web com JS
-- [ ] Projeto com HTML/CSS - Listagem de Pokémon
+- [x] Projeto com HTML/CSS - Listagem de Pokémon
 - [ ] Dominando o Protocolo HTTP e Integração com a PokeAPI
 - [ ] Desafio
 
