@@ -46,3 +46,6 @@
     - Colocar os elementos um ao lado do outro:
         - A lista terá um `display: grid`: o estilo da lista se torna uma tabela.
         - `grid-template-columns: 1fr 1r`: cada parte da tabela ocupa 1 fração da coluna
+
+2. Uso de `media querys`
+    - Media query definem qual será o conjunto de CSS aplica de acordo com o tamanho da tela
