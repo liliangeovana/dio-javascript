@@ -53,8 +53,58 @@
 
 ## Header
 - Configuração da requisição.
+    - Por exemplo, se desejo enviar para cadastro informações no formato JSON, no header faço essa configuração.
 
 ## Body e Status Code
 
 - Body:
-    - Dependendo do método que esteja sendo utilizado na requisição, há p `body` - corpo - da minha requisição, que é o dado que desejo que trafegue.
+    - Dependendo do método que esteja sendo utilizado na requisição, há o `body` - corpo - da minha requisição, que é o dado que desejo que trafegue.
+
+    - Método GET: não tem um body na requisição, pois a sua transferência de dados se dá pelo path e/ou header.
+
+    -  Método POST: Desejando inserir um novo dado, o envio dos dados a serem cadastrados se dá através do body.
+        Exemplo:
+
+            
+            //Request Headers
+                content-type: application/json
+
+            //Body
+                {
+                    "name": "AAA"
+                }
+    
+    - O body pode ter tanto na requisição quanto na resposta (nesse cenário o GET já tem body).
+
+- Status Code:
+    - É uma resposta do servidor indicando o que aconteceu com a requisição feita. Se ela foi processada, se deu algum problema.
+    
+    - É um número que o servidor retorna, no qual:
+        - Família 200 (200-299): sucesso na resposta.
+        - 300 - 399: mensagem de redirecionamento.
+        - 400 - 499: erro do cliente.
+        - 500 - 599: erro do servidor.
+    
+    - Possui o respose header e body.
+
+#### Resumindo:
+- Mando para o servidor o que compõe uma requisição:
+    - URL
+    - Request Method
+    - Request Header
+    - Request Body
+
+- O servidor devolve:
+    - Status Code 
+    - Response header: como a resposta está configurada.
+    - Response body: a resposta em si.
+        > O status code também pode ser uma resposta no body.
+
+## Integrando com a PokeAPI
+
+### Primeira requisição
+- Para iniciar a listagem dos pokémons, é necessário pegar o `end-point` que será consumido da PokeAPI.
+
+- No site `https://pokeapi.co/` temos a API, onde:
+    - `https://pokeapi.co/api/v2/pokemon/`: faz a listagem dos 20 primeiros pokémons em um arquivo JSON.
+        > Após pokemon/ pode-se colocar o nome ou número de um pokémon específico. 

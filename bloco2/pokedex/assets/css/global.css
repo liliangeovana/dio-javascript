@@ -20,14 +20,14 @@ body {
 
 h1 {
     font-family: 'Amiga Forever', sans-serif;
-    color: rgb(222, 213, 34);
+    color: rgb(231, 221, 22);
     padding: 5rem 0 1rem 0;
     text-align: center;
-    text-shadow:1px 4px 1px #0a15ec7c;
+    text-shadow:1px 4px 1px #040c9e7c;
     background-image: url("../img/logo.jpg");
     background-repeat: no-repeat;
-    background-position: 0% 110%;
-    background-size: 282px;
+    background-position: -5% 107%;
+    background-size: 285px;
     border-radius: 1rem;
 }
 
