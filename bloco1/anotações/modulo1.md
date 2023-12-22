@@ -1,5 +1,5 @@
 # MÓDULO 1
-### 1. Variáveis e Operadores
+### 1. Variáveis e Operadores c:
 - Declarando Variáveis
 - Exemplo de declaração e escrita o console
 -  
