@@ -108,3 +108,11 @@
 - No site `https://pokeapi.co/` temos a API, onde:
     - `https://pokeapi.co/api/v2/pokemon/`: faz a listagem dos 20 primeiros pokémons em um arquivo JSON.
         > Após pokemon/ pode-se colocar o nome ou número de um pokémon específico. 
+    - `https://pokeapi.co/api/v2/pokemon/?offset=0&limit=10`: traz a listagem dos 10 primeiros.
+
+- Assim, o que deseja ser feito? Ao iniciar a página, precisamos que o elemento que contém a listagem de pokémons - no index.html - seja preenchida, no padrão desejado.
+
+#### Como fazer?
+1. Realizar uma requisição http via JavaScript para consumir a end-point e trazer a listagem.
+    - Como fazer uma requisição http via JS? Há várias formas, no projeto utilizou-se o `Fetch API`.  
+    > Fetch API é uma biblioteca que já é integrada no JavaScript do navegador, sem necessidade de instalação.
