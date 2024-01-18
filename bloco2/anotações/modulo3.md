@@ -214,12 +214,14 @@
     ~~~javascript
     fetch(url)
         .then((response) =>  response.json())
-        .then((jsonBody) => console.log(jsonBody))
+        .then((jsonBody) => {} console.log(jsonBody))
         .catch((error) =>  console.error(error));
     ~~~
     1. Primeiro then: transforma o `response` em uma promessa do body convertido em json
     2. Segundo then: recebendo o body convertido e printando
 
+### Lista de Pokémon em uma lista HTML
+    - Ao inserir `debugger` no código, ao ser executada, aplicação para onde esse comando foi digitado. Pode ser visualizado na parte de Debugger nas Ferramentas do Desenvolvedor.
 
 
     
