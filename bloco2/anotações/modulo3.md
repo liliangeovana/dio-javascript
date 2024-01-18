@@ -139,7 +139,7 @@
     
     - Basicamente: faz a requisição - fetch - então - then - quando der certo, posso manipular.
         
-![Alt text](image-1.png)
+<img src="./img/image-1.png">
 > No console, primeiro imprimiu o "20", posteriormente exibiu o response.
 
 ### Manipulando o resultado da requisição através de uma Promise
@@ -168,7 +168,7 @@
         - O fetch, por padrão, vai retornar uma Stream de dados, na pokédex temos um json.
         - Para trabalhar no JS, será necessário transformar essa `ReadableStream` em `JSON`
 
-        ![Alt text](image-2.png)
+        <img src="./img/image-2.png">
         >Console: response.
     
     - Dessa forma, no código JS, o próprio `response` já possui o `.json`:
@@ -182,7 +182,7 @@
         })
          ~~~
 
-         ![Alt text](image-3.png)
+         <img src="./img/image-3.png">
          > Console: response já em json.
 
 - Porém, para tratar o assincronismo, começa a ter muitos callbacks (função dentro de função), o que não é muito recomendado.
