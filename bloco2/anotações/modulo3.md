@@ -112,7 +112,114 @@
 
 - Assim, o que deseja ser feito? Ao iniciar a página, precisamos que o elemento que contém a listagem de pokémons - no index.html - seja preenchida, no padrão desejado.
 
+- No Console, da ferramenta do desenvolvedor, queremos chamar via http o end-point.
+
 #### Como fazer?
 1. Realizar uma requisição http via JavaScript para consumir a end-point e trazer a listagem.
     - Como fazer uma requisição http via JS? Há várias formas, no projeto utilizou-se o `Fetch API`.  
-    > Fetch API é uma biblioteca que já é integrada no JavaScript do navegador, sem necessidade de instalação.
+        > Fetch API é uma biblioteca que já é integrada no JavaScript do navegador, sem necessidade de instalação. Outras seriam: Axios, Jquery.
+
+    ~~~javascript
+    const offset = 0;
+    const limit = 10;
+    const url = `https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=${limit}`;
+
+    fetch(url).then(function (response) {
+        console.log(response);
+    })
+
+    const x = 10 + 10;
+    console.log (x);
+    ~~~
+    - FETCH RETORNA UMA PROMISE (PROMESSA DE UM RESULTADO)
+        > É um processo assíncrono, pois, para retornar uma requisição, é um processo de várias etapas e que pode demorar para ser processado.
+
+    - MÉTODO THEN: retorna o sucesso no processamento da promise. 
+        > No exemplo acima, ao executar o código será definida as variáveis (offset, limit, url), será feita a requisição HTTP (fetch) - processo assíncrono, fará o cálculo de x, exibirá o resultado e, só então (then), terá processado a requisição e exibirá o response.
+    
+    - Basicamente: faz a requisição - fetch - então - then - quando der certo, posso manipular.
+        
+![Alt text](image-1.png)
+> No console, primeiro imprimiu o "20", posteriormente exibiu o response.
+
+### Manipulando o resultado da requisição através de uma Promise
+- Caso o `fetch()` retorne corretamente, como manipular o erro? Utiliza-se o `catch`.
+    - E, independente do sucesso ou fracasso, o `finally` é executado.
+
+    ~~~javascript
+    const offset = 0;
+    const limit = 10;
+    const url = `https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=${limit}`;
+
+    fetch(url)
+        .then(function (response) {  
+            console.log(response);
+    })
+        .catch(function(error){
+            console.error(error);
+        })
+        .finally(function(){
+            console.log("Requisição concluída");
+        })
+    ~~~
+    > Assim, a estrutura da Promise é formada (try(fetch), catch, finally)
+
+    - Ao visualizar o response (Ferramenta desenvolvedor -> Console), é visível que a resposta do body foi retornado como: `body: ReadableStream`.
+        - O fetch, por padrão, vai retornar uma Stream de dados, na pokédex temos um json.
+        - Para trabalhar no JS, será necessário transformar essa `ReadableStream` em `JSON`
+
+        ![Alt text](image-2.png)
+        >Console: response.
+    
+    - Dessa forma, no código JS, o próprio `response` já possui o `.json`:
+        ~~~javascript
+        .then(function (response) {
+
+            response.json().then(function(responseBody){
+                console.log(responseBody);
+            });
+
+        })
+         ~~~
+
+         ![Alt text](image-3.png)
+         > Console: response já em json.
+
+- Porém, para tratar o assincronismo, começa a ter muitos callbacks (função dentro de função), o que não é muito recomendado.
+    - Assim, pode-se encadear os `then()` e utilizar `Arrow Functions =>`
+
+    ~~~javascript
+    const offset = 0;
+    const limit = 10;
+    const url = `https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=${limit}`;
+
+    fetch(url)
+        .then(response => {  
+            return response.json()
+        })
+        .then(jsonBody => {
+            console.log(jsonBody);
+        })
+        .catch(error => {
+            console.error(error);
+        })
+        .finally(function(){
+            console.log("Requisição concluída");
+        })
+    ~~~
+
+    - Além disso, tendo apenas um `return`, pode-se reduzir:
+
+    
+    ~~~javascript
+    fetch(url)
+        .then((response) =>  response.json())
+        .then((jsonBody) => console.log(jsonBody))
+        .catch((error) =>  console.error(error));
+    ~~~
+    1. Primeiro then: transforma o `response` em uma promessa do body convertido em json
+    2. Segundo then: recebendo o body convertido e printando
+
+
+
+    
