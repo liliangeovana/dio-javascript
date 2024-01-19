@@ -1,16 +1,18 @@
-
+function convertTypesToList(pokemonTypes){
+    return pokemonTypes.map((typeSlote)=> `<li class="type">${typeSlote.type.name}</li>`)
+}
 function convertPokemonToList(pokemon) {
+        const caminho = "official-artwork"
         return `
         
         <li class="pokemon">
-                    <span class="number">#001</span>
+                    <span class="number">#${pokemon.id}</span>
                         <span class="name">${pokemon.name}</span>
                             <div class="details">
                                 <ol class="types">
-                                    <li class="type">grass</li>
-                                        <li class="type">poison</li>
+                                    ${convertTypesToList(pokemon.types).join(' ')}
                                 </ol>
-                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="${pokemon.name}"/>
+                                <img src="${pokemon.sprites.other.caminho.front_default}" alt="${pokemon.name}"/>
                             </div>           
                     </li>`    
 }
