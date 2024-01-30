@@ -132,7 +132,7 @@
 .pokemon .details img {
     margin-left: 2px;
     max-width: 100%;
-    height:100px; 
+    height:70px; 
 }
 
 @media screen and (max-width: 380px) {
